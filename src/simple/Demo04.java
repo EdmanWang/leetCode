@@ -34,7 +34,7 @@ public class Demo04 {
     }
 
     //方法2：java大神的代码
-    public static void addDigital(int num){
-        System.out.println((num - 1)%9 + 1);
+    public static void addDigital(int num) {
+        System.out.println((num - 1) % 9 + 1);
     }
 }
