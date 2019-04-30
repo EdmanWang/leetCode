@@ -1,7 +1,6 @@
 package middle;
 
-import middle.util.ListNode;
-import middle.util.Node;
+import middle.util.listNode.ListNode;
 
 // 两数想加 leetCode ---- 题号：2
 public class Demo01 {
@@ -20,30 +19,27 @@ public class Demo01 {
     }
 
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        int oneIndex = 1;
-        int twoIndex = 1;
+        ListNode p, q;
+        p = l1;
+        q = l2;
         int temp = 0;
-        Node node = new Node(0);
         ListNode listNode = new ListNode();
-        int maxLength = l1.getLength(l1.headNode) > l2.getLength(l2.headNode) ? l1.getLength(l1.headNode) : l2.getLength(l2.headNode);
-        while (maxLength >= 0) {
-            int one = 0;
-            int two = 0;
-            if (l1.getElement(l1, oneIndex) != null) {
-                one = l1.getElement(l1, oneIndex).value;
-                oneIndex++;
+        while (p.headNode!=null || q.headNode!=null || temp > 0 ){
+            int oneValue  = 0;
+            int twoValue = 0;
+            if (p.headNode!=null){
+                oneValue = p.headNode.value;
             }
-            if (l2.getElement(l2, twoIndex) != null) {
-                two = l2.getElement(l2, twoIndex).value;
-                twoIndex++;
+            if (q.headNode!=null){
+                twoValue = q.headNode.value;
             }
-            int sum = one + two + temp;
+            int sum = oneValue + twoValue + temp;
             temp = sum / 10;
             if (sum != 0){
                 listNode.addNode(sum % 10);
             }
-            maxLength --;
-
+            p.headNode = p.headNode.next;
+            q.headNode = q.headNode.next;
         }
         return listNode.reverseNodeList(listNode);
     }

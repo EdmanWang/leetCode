@@ -1,4 +1,4 @@
-package middle.util;
+package middle.util.listNode;
 
 // 链表定义
 public class Node {
