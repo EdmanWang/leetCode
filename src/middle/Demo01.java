@@ -1,7 +1,7 @@
 package middle;
 
-import middle.util.ListNode;
-import middle.util.Node;
+import middle.util.listNode.ListNode;
+import middle.util.listNode.Node;
 
 // 两数想加 leetCode ---- 题号：2
 public class Demo01 {

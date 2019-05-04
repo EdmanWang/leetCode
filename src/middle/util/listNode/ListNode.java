@@ -1,4 +1,4 @@
-package middle.util;
+package middle.util.listNode;
 
 // 单链表的实现
 public class ListNode {
