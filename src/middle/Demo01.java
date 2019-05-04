@@ -43,7 +43,6 @@ public class Demo01 {
                 listNode.addNode(sum % 10);
             }
             maxLength --;
-
         }
         return listNode.reverseNodeList(listNode);
     }
