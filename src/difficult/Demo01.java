@@ -1,4 +1,4 @@
-package differcult;
+package difficult;
 
 import java.util.Arrays;
 
